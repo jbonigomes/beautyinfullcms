@@ -1,0 +1,17 @@
+.social {
+  display: flex;
+
+  a {
+    flex: 1;
+    color: $black;
+    font-size: 22px;
+    text-align: right;
+    transition: color .5s ease-in-out;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    color: $light-grey;
+  }
+}

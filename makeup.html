@@ -1,12 +1,13 @@
 ---
 layout: default
+permalink: /makeup/
 ---
 
-<h1>Home</h1>
+<h1>Makeup</h1>
 
 <ul>
   {% for post in site.posts %}
-    {% if post.categories contains 'featured' %}
+    {% if post.categories contains 'makeup' %}
       <li>
         <span>{{ post.date | date: "%b %-d, %Y" }} - </span>
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
