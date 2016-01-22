@@ -1,8 +1,13 @@
 nav {
   display: flex;
-  text-align: center;
+  text-align: left;
 
   div {
     flex: 1;
+
+    a {
+      display: block;
+      padding: 10px 0;
+    }
   }
 }

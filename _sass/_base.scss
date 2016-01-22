@@ -23,3 +23,45 @@ a:active {
   color: $gold;
   text-decoration: none;
 }
+
+input {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  outline: none;
+  background: $ice;
+  transition: all .5s ease-in-out;
+}
+
+input:hover,
+input:focus,
+input:active {
+  background: $white;
+}
+
+::selection {
+  background: $ice;
+}
+::-moz-selection {
+  background: $ice;
+}
+
+::-webkit-input-placeholder {
+  color: $light-purple;
+}
+
+:-moz-placeholder {
+  color: $light-purple;
+}
+
+::-moz-placeholder {
+  color: $light-purple;
+}
+
+:-ms-input-placeholder {
+  color: $light-purple;
+}
+
+::-ms-input-placeholder {
+  color: $light-purple;
+}
