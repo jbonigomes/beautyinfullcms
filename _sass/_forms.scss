@@ -1,0 +1,23 @@
+input,
+textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  outline: none;
+  background: $ice;
+  margin-bottom: 20px;
+  transition: all .5s ease-in-out;
+}
+
+input:hover,
+input:focus,
+input:active,
+textarea:hover,
+textarea:focus,
+textarea:active {
+  background: $white;
+}
+
+textarea {
+  height: 300px;
+}

@@ -1,4 +1,7 @@
-// sass goes here
+#disqus_thread {
+  margin-top: 50px;
+}
+
 html {
   font-weight: 300;
   font-family: 'Lato', sans-serif;
@@ -24,19 +27,8 @@ a:active {
   text-decoration: none;
 }
 
-input {
-  width: 100%;
-  border: none;
-  padding: 10px;
-  outline: none;
-  background: $ice;
-  transition: all .5s ease-in-out;
-}
-
-input:hover,
-input:focus,
-input:active {
-  background: $white;
+section {
+  padding: 40px 0;
 }
 
 ::selection {
