@@ -49,17 +49,19 @@
   $('form.contact').on('submit', function(e) {
     e.preventDefault();
 
+    var name = $('#name').val();
     var email = $('#email').val();
     var message = $('#message').val();
 
-    if(formIsValid(email, message)) {
+    if(formIsValid(email, message, name)) {
       $.ajax({
         url: '//formspree.io/thebeautyinfull@gmail.com',
         method: 'POST',
         dataType: 'json',
         data: {
-          from: 'Jose',
-          message: 'Hello'
+          from: name,
+          email: email,
+          message: message
         },
       });
     }
@@ -75,8 +77,9 @@
     }
   });
 
-  function formIsValid(email, message) {
-    return emailIsValid(email) > 0 && message.length > 5 && message.length < 800;
+  function formIsValid(email, message, name) {
+    return emailIsValid(email) > 0 && message.length > 5
+      && message.length < 800 && name.length > 0 && name.length < 200;
   }
 
   function emailIsValid(email) {
