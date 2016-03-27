@@ -1,8 +1,9 @@
 ---
 layout: null
 ---
+{% assign posts=site.posts | where:"lang", page.lang %}
 {
-  {% for post in site.posts %}
+  {% for post in posts %}
     "{{ post.url | slugify }}": {
       "title": "{{ post.title | xml_escape }}",
       "content": "{{ post.content | strip_html | strip_newlines }}",

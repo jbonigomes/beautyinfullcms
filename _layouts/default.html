@@ -28,6 +28,9 @@
 
   <body>
 
+    {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+    {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+
     <header>
       <div class="container">
         <div class="row">
@@ -59,6 +62,16 @@
               <a href="/feed.xml" target="_blank">
                 <i class="fa fa-rss"></i>
               </a>
+              {% for post in posts %}
+                <a href="{{ post.url }}" class="{{ post.lang }}">
+                  {{ post.lang }}
+                </a>
+              {% endfor %}
+              {% for page in pages %}
+                <a href="{{ page.url }}" class="{{ page.lang }}">
+                  {{ page.lang }}
+                </a>
+              {% endfor %}
             </div>
           </div>
         </div>

@@ -2,6 +2,8 @@
 layout: post
 title: "A post about beauty and makeup"
 image: "post_4.png"
+lang: en
+ref: hello
 categories: beauty featured makeup
 carousel: "post_4.png"
 ---

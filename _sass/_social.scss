@@ -16,3 +16,7 @@
     color: $light-grey;
   }
 }
+
+.en:lang(en), .pt:lang(pt) {
+  font-weight: bold;
+}

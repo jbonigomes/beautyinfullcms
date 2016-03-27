@@ -4,8 +4,9 @@ layout: default
 
 <h1>Home</h1>
 
+{% assign posts=site.posts | where:"lang", page.lang %}
 <ul>
-  {% for post in site.posts %}
+  {% for post in posts %}
     {% if post.categories contains 'featured' %}
       <li>
         <span>{{ post.date | date: "%b %-d, %Y" }} - </span>
