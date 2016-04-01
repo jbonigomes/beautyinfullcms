@@ -2,12 +2,12 @@ Todo:
   ☐ Make a Zoella style CSS
   ☐ Use Poiret font on the menu
   ☐ Thanks message upon contact form submission
-  ☐ Create a sitemap.xml (http://jekyll.tips/tutorials/seo/)
-  ☐ Disqus messages from users that do not have an image should have a default
   ✔ Permalinks @done (16-04-01 16:54)
   ✔ Set site name to BeautyinFull @done (16-04-01 16:47)
   ✔ Links in the footer to go inline @done (16-04-01 16:53)
   ✔ Home link in the main menu with a home icon @done (16-04-01 16:44)
+  ✔ Create a sitemap.xml (http://jekyll.tips/tutorials/seo/) @done (16-04-01 17:53)
+  ✔ Disqus messages from users that do not have an image should have a default @done (16-04-01 18:37)
 
 Discuss:
   ☐ Ask for GA ID
