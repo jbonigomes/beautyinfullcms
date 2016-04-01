@@ -15,9 +15,9 @@
     });
   });
 
-  $('form.search').on('submit', function(e) {
+  $('#search').on('submit', function(e) {
     e.preventDefault();
-    var query = $('form.search input').val();
+    var query = $('#search input').val();
     if(query.length) {
       var results = idx.search(query);
       display_search_results(results);
@@ -63,6 +63,8 @@
           email: email,
           message: message
         },
+      }).done(function() {
+        window.location.href = '/thanks/';
       });
     }
     else {
