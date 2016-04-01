@@ -1,4 +1,4 @@
-# Website for Beauty in full
+# Website for BeautyinFull
 
 ## Disqus moderation
     http://beautyinfull.disqus.com
