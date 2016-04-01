@@ -12,6 +12,7 @@
     - layout
     - permalink
     - description
+    - sitemap
 
   - Posts only:
     - author
