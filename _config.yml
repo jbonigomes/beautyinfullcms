@@ -3,18 +3,12 @@ markdown: kramdown
 sass:
   style: compressed
 
-t:
-  en:
-    home:
-      name: "Home"
-      url: "/"
-    about:
-      name: "About"
-      url: "/about/"
-  pt:
-    home:
-      name: "Casa"
-      url: "/casa/"
-    about:
-      name: "A respeito"
-      url: "/a-respeito/"
+ga_analytics: UA-XXXXXXXX-X
+
+name: BeutyinFull
+
+url: http://beautyinfull.com
+
+exclude:
+  - bin/*
+  - README.md

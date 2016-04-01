@@ -1,8 +1,13 @@
 ---
 layout: post
-title: "A post about style"
-image: "post_3.png"
+author: Jose
+carousel: true
+image: post_3.png
+title: A post about style
 categories: style featured
+image: /img/posts/post_4.png
+permalink: /a-post-about-style/
+description: This text represents a paragraph, this paragraph can be as...
 ---
 
 # This is a primary header

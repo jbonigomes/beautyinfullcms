@@ -1,8 +1,12 @@
 ---
 layout: post
-title: "A post about makeup"
-image: "post_2.png"
+author: Jose
+carousel: true
+title: A post about makeup
 categories: makeup featured
+image: /img/posts/post_3.png
+permalink: /a-post-about-makeup/
+description: This text represents a paragraph, this paragraph can be as...
 ---
 
 # This is a primary header

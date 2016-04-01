@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "A post about beauty and makeup"
-image: "post_4.png"
-lang: en
-ref: hello
+author: Jose
+carousel: true
+image: /img/posts/post_1.png
+permalink: /a-post-about-beauty/
 categories: beauty featured makeup
-carousel: "post_4.png"
+title: A post about beauty and makeup
+description: This text represents a paragraph, this paragraph can be as...
 ---
 
 # This is a primary header
@@ -28,7 +29,6 @@ as you want it to be.
 
 This paragraph uses some *italic* and some more **emphasis**
 
-> This is a blockquote, this blockquote can be as long as you want it to be.
 > This is a blockquote, this blockquote can be as long as you want it to be.
 > This is a blockquote, this blockquote can be as long as you want it to be.
 > This is a blockquote, this blockquote can be as long as you want it to be.
