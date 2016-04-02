@@ -3,7 +3,7 @@ markdown: kramdown
 sass:
   style: compressed
 
-ga_analytics: UA-XXXXXXXX-X
+ga_analytics: UA-75884732-1
 
 name: BeautyinFull
 
