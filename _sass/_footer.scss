@@ -1,6 +1,6 @@
 html {
-  position: relative;
   min-height: 100%;
+  position: relative;
 }
 
 body {
@@ -24,6 +24,7 @@ footer {
     font-size: 22px;
     color: $light-purple;
     display: inline-block;
+    font-family: 'Poiret One', cursive;
   }
 
   p {
