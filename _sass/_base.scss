@@ -15,15 +15,15 @@ h1 {
   font-weight: 400;
 }
 
-a {
+a,
+a:focus,
+a:active {
   color: $purple;
   transition: color .5s ease-in-out;
 }
 
-a:hover,
-a:focus,
-a:active {
-  color: $gold;
+a:hover {
+  color: $red;
   text-decoration: none;
 }
 
@@ -32,10 +32,10 @@ section {
 }
 
 ::selection {
-  background: $ice;
+  background: $light-grey;
 }
 ::-moz-selection {
-  background: $ice;
+  background: $light-grey;
 }
 
 ::-webkit-input-placeholder {

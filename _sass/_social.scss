@@ -1,8 +1,10 @@
 .social {
   display: flex;
-  margin-top: 20px;
+  margin-top: 60px;
 
-  a {
+  a,
+  a:focus,
+  a:active {
     flex: 1;
     color: $black;
     font-size: 22px;
@@ -10,9 +12,31 @@
     transition: color .5s ease-in-out;
   }
 
-  a:hover,
-  a:focus,
-  a:active {
-    color: $light-grey;
+  a.rss:hover {
+    color: $rss;
+  }
+
+  a.google:hover {
+    color: $google;
+  }
+
+  a.twitter:hover {
+    color: $twitter;
+  }
+
+  a.youtube:hover {
+    color: $youtube;
+  }
+
+  a.facebook:hover {
+    color: $facebook;
+  }
+
+  a.instagram:hover {
+    color: $instagram;
+  }
+
+  a.pinterest:hover {
+    color: $pinterest;
   }
 }

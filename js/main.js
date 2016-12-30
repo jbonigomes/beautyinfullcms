@@ -1,6 +1,7 @@
 (function() {
   'use strict';
 
+  // SEARCH
   var idx = lunr(function () {
     this.field('id');
     this.field('content');
@@ -46,6 +47,7 @@
     });
   }
 
+  // CONTACT FORM
   $('form.contact').on('submit', function(e) {
     e.preventDefault();
 
@@ -89,4 +91,15 @@
     return re.test(email);
   }
 
+  // INSTAGRAM
+  var instaurl = [
+    'https://api.instagram.com/v1/users/930342892/media/recent/?',
+    'access_token=930342892.1677ed0.9f25bc22d2b64e5c834c7b24227affa0&count=10'
+  ].join('');
+
+  $.get(instaurl, function(res) {
+    res.data.forEach(function(instaimg) {
+      // add the image to the DOM
+    });
+  });
 })();

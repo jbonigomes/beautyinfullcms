@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Makeup
+title: Inspirations
 sitemap: true
-permalink: /makeup/
-description: Posts about makeup
+permalink: /inspirations/
+description: Posts about inspirations
 ---
 
-<h1>Makeup</h1>
+<h1>Inspirations</h1>
 
 {% assign posts=site.posts | where:"lang", page.lang %}
 <ul>
   {% for post in posts %}
-    {% if post.categories contains 'makeup' %}
+    {% if post.categories contains 'inspirations' %}
       <li>
         <span>{{ post.date | date: "%b %-d, %Y" }} - </span>
         <a href="{{ post.url }}">{{ post.title }}</a>
