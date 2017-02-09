@@ -57,7 +57,7 @@
 
     if(formIsValid(email, message, name)) {
       $.ajax({
-        url: '//formspree.io/thebeautyinfull@gmail.com',
+        url: '//formspree.io/contact@beautyinfull.com',
         method: 'POST',
         dataType: 'json',
         data: {
