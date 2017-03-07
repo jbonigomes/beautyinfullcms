@@ -1,8 +1,14 @@
-.logo {
-  padding: 20px 0;
+a.logo {
+  margin: 20px 0;
   display: inline-block;
 
+  img {
+    width: 100px;
+    height: auto;
+  }
+
   span {
+    color: $red;
     font-size: 70px;
     font-family: 'Playball', cursive;
   }
