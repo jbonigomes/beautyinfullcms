@@ -6,4 +6,4 @@ sitemap: true
 description: Terms and conditions of usage
 ---
 
-<h1>Terms and conditions</h1>
+# Terms and conditions

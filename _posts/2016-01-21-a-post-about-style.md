@@ -1,10 +1,11 @@
 ---
 layout: post
-author: Jose
-carousel: true
-image: post_3.png
 title: A post about style
-categories: style featured
+subtitle: The post subtitle here
+author: Jose
+rightside: true
+categories: style featured care
+carousel: true
 image: /img/posts/post_4.png
 permalink: /a-post-about-style/
 description: This text represents a paragraph, this paragraph can be as...

@@ -6,4 +6,4 @@ permalink: /privacy/
 description: Privacy policy guidelines
 ---
 
-<h1>Privacy policy</h1>
+# Privacy policy

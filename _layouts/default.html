@@ -127,23 +127,34 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="col-xs-12">
-            <nav>
-              <div><a href="/">HOME</a></div>
-              <div><a href="/beauty/">BEAUTY &amp; MAKE-UP</a></div>
-              <div><a href="/fashion/">FASHION &amp; STYLE</a></div>
-              <div><a href="/health/">FITNESS &amp; HEALTH</a></div>
-              <div><a href="/inspirations/">INSPIRATIONS</a></div>
-              <div><a href="/photography/">PHOTOGRAPHY</a></div>
-              <div>
-                <form id="search">
-                  <i class="fa fa-search"></i>
-                  <input type="text" placeholder="Search" />
-                </form>
-              </div>
-            </nav>
+      <div class="nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <nav>
+                <div><a href="/">HOME</a></div>
+
+                {% for menu in site.menus %}
+                <div class="parent">
+                  <a href="#">{{menu.name}}</a>
+                  <div class="nested">
+                    {% for child in menu.children %}
+                      <a href="/{{child.url}}/">{{child.name}}</a>
+                    {% endfor %}
+                  </div>
+                </div>
+                {% endfor %}
+
+                <div>
+                  <form id="search">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="Search" />
+                  </form>
+                </div>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -153,7 +164,9 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-9 content">
+            <div>publicidade</div>
             {{ content }}
+            <div>publicidade</div>
           </div>
           <div class="col-xs-3">
             <div>publicidade</div>
@@ -175,6 +188,10 @@
 
             <div>publicidade</div>
           </div>
+        </div>
+
+        <div class="row">
+          instagram thing
         </div>
       </div>
     </section>
