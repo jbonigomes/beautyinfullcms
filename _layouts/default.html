@@ -33,11 +33,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Raleway">
     <link
-      rel='stylesheet'
-      href='https://fonts.googleapis.com/css?family=Playball'>
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Playball">
     <link
-      rel='stylesheet'
-      href='https://fonts.googleapis.com/css?family=Poiret+One'>
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lusitana">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poiret+One">
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -64,7 +67,7 @@
 
   <body>
     <!--[if lt IE 8]>
-      <p class="browserupgrade">
+      <p class="browser-upgrade">
         You are using an <strong>outdated</strong> browser.
         Please <a href="http://browsehappy.com/">upgrade your browser</a>
         to improve your experience.
@@ -81,7 +84,7 @@
             </a>
           </div>
           <div class="col-xs-5">
-            <div class="social">
+            <div class="social text-right">
               <a
                 target="_blank"
                 class="facebook"
@@ -162,12 +165,19 @@
 
     <section>
       <div class="container">
+        {% if page.permalink == '/' %}
+        <div class="row">
+          <div class="col-xs-12">
+            {% include carousel.html %}
+          </div>
+        </div>
+        {% endif %}
         <div class="row">
           <div class="col-xs-9 content">
             {{ content }}
           </div>
           <div class="col-xs-3">
-            <div>publicidade</div>
+            <div class="publicity">AD</div>
 
             <div>
               <form class="subscribe" novalidate>
@@ -180,18 +190,21 @@
               </form>
             </div>
 
-            <div>publicidade</div>
+            <div class="publicity">AD</div>
 
             <a href="/a-post-about-style" class="featured text-center">
-              <img src="/img/posts/post_1.png" alt="Alt text here">
+              <img src="/img/posts/post_1.jpg" alt="Alt text here">
               <small class="text-center">The post title</small>
             </a>
 
-            <div>publicidade</div>
+            <div class="publicity">AD</div>
 
-            <div>post number 2</div>
+            <a href="/a-post-about-style" class="featured text-center">
+              <img src="/img/posts/post_2.jpg" alt="Alt text here">
+              <small class="text-center">The post title</small>
+            </a>
 
-            <div>publicidade</div>
+            <div class="publicity">AD</div>
           </div>
         </div>
 
@@ -204,7 +217,7 @@
     </section>
 
     <footer>
-      <div class="container">
+      <div class="container text-center">
         <div class="row">
           <div class="col-xs-12">
             <a href="/about">ABOUT</a>

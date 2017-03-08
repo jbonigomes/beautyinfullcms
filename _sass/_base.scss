@@ -2,25 +2,11 @@
   margin-top: 50px;
 }
 
-html {
-  font-family: 'Raleway', sans-serif;
-}
+img {
+  width: 100%;
+  max-width: 100%;
 
-body {
-  font-size: 18px;
-}
-
-a,
-a:focus,
-a:active {
-  color: $purple;
-  text-decoration: none;
-  transition: color .5s ease-in-out;
-}
-
-a:hover {
-  color: $dark-purple;
-  text-decoration: none;
+  height: auto;
 }
 
 section {

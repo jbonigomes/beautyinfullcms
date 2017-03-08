@@ -2,11 +2,15 @@
 layout: default
 ---
 
-<div>publicidade</div>
+<div class="publicity">AD</div>
 
 <article itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 itemprop="name headline">{{ page.title }}</h1>
+  <h1 itemprop="name headline" class="headline text-center">
+    {{ page.title }}
+  </h1>
+
+  <h3 class="text-center">{{ page.subtitle }}</h3>
 
   <p>
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -26,14 +30,14 @@ layout: default
 
 </article>
 
-<div>publicidade</div>
+<div class="publicity">AD</div>
 
 <div id="disqus_thread"></div>
 
 <script>
   var disqus_config = function () {
-    this.page.url = "http://beautyinfull.com/{{ page.url }}";
     this.page.identifier = "{{ page.url }}";
+    this.page.url = "http://beautyinfull.com/{{ page.url }}";
   };
 
   (function() {

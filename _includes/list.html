@@ -1,5 +1,5 @@
 {% if page.title != 'Home' %}
-  <div>Publicidade</div>
+  <div class="publicity">AD</div>
   <h1>{{ page.title }}</h1>
 {% endif %}
 
@@ -7,7 +7,7 @@
   {% if post.categories contains page.category %}
   <h2 class="text-center">{{ post.title }}</h2>
   <h3 class="text-center">{{ post.subtitle }}</h3>
-  <div>
+  <div class="post-image">
     <div class="left">
       {{ post.categories | join: ', ' }} |
       {{ post.date | date: "%b %-d, %Y" }} |
@@ -23,4 +23,4 @@
   {% endif %}
 {% endfor %}
 
-<div>publicidade</div>
+<div class="publicity">AD</div>

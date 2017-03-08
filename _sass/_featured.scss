@@ -5,11 +5,6 @@ a.featured {
   font-weight: bold;
   border: 3px solid $light-grey;
   transition: all .3s ease-in-out;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
 }
 
 a.featured:hover {

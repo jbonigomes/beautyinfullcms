@@ -4,7 +4,7 @@ title: A post about beauty and makeup
 subtitle: The post subtitle here
 author: Jose
 categories: care home carousel featured
-image: /img/posts/post_1.png
+image: /img/posts/post_1.jpg
 permalink: /a-post-about-beauty/
 description: This text represents a paragraph, this paragraph can be as...
 ---
@@ -50,7 +50,7 @@ sit amet, consectetuer adipiscing elit.
 
 This is an non default image
 
-![Pretty Picture](/img/posts/post_1.png)
+![Pretty Picture](/img/posts/post_1.jpg)
 
 1. **A sample that has a highlighted header**
 

@@ -6,8 +6,10 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400);
 
 @import "variables";
-@import "bootstrapOverrides";
+@import "browser-upgrade";
+@import "bootstrap-overrides";
 @import "base";
+@import "typography";
 
 @import "forms";
 
@@ -17,6 +19,8 @@
 @import "logo";
 @import "social";
 @import "featured";
+@import "publicity";
+@import "post-image";
 
 @import "thanks";
-@import "notfound";
+@import "not-found";
