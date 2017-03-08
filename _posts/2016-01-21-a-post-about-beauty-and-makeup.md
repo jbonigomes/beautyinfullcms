@@ -1,10 +1,12 @@
 ---
 layout: post
-title: A post about beauty and makeup
+title: Post 1
 subtitle: The post subtitle here
 author: Jose
 categories: care home carousel featured
 image: /img/posts/post_1.jpg
+carouselimage: /img/posts/post_5.jpg
+imagedescription: a description here
 permalink: /a-post-about-beauty/
 description: This text represents a paragraph, this paragraph can be as...
 ---

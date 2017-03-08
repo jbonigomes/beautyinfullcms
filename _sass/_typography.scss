@@ -1,4 +1,5 @@
 // font-family: 'Lusitana', serif;
+// font-family: 'Italianno', cursive;
 // font-family: 'Poiret One', cursive;
 // font-family: 'Raleway', sans-serif;
 
@@ -21,7 +22,7 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-h1, h2, h3 {
+h1, h3 {
   margin-bottom: 30px;
 }
 
@@ -52,6 +53,12 @@ h2 {
 
 h3 {
   color: $grey;
-  font-size: 25px;
+  font-size: 24px;
   font-family: 'Poiret One', cursive;
+}
+
+h4 {
+  color: $grey;
+  font-size: 22px;
+  font-family: 'Lusitana', serif;
 }

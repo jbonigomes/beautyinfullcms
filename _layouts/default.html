@@ -40,6 +40,9 @@
       href="https://fonts.googleapis.com/css?family=Lusitana">
     <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Italianno">
+    <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poiret+One">
     <link
       rel="stylesheet"
@@ -181,36 +184,27 @@
 
             <div>
               <form class="subscribe" novalidate>
-                <i class="fa fa-email"></i> Subscribe to our newsletter
+                <i class="fa fa-envelope-o"></i> Subscribe to our newsletter
                 <input type="text" id="name" placeholder="Name">
                 <input type="email" id="email" placeholder="my@email.com">
                 <button type="submit" class="btn btn-default btn-block">
-                  SEND
+                  JOIN
                 </button>
               </form>
             </div>
 
             <div class="publicity">AD</div>
 
-            <a href="/a-post-about-style" class="featured text-center">
-              <img src="/img/posts/post_1.jpg" alt="Alt text here">
-              <small class="text-center">The post title</small>
-            </a>
+            {% for post in site.posts %}
+              {% if post.categories contains 'featured' %}
+              <a href="{{ post.url }}" class="featured text-center">
+                <img src="{{ post.image }}" alt="{{ post.imagedescription }}">
+                <small class="text-center">{{ post.title }}</small>
+              </a>
+              {% endif %}
+            {% endfor %}
 
             <div class="publicity">AD</div>
-
-            <a href="/a-post-about-style" class="featured text-center">
-              <img src="/img/posts/post_2.jpg" alt="Alt text here">
-              <small class="text-center">The post title</small>
-            </a>
-
-            <div class="publicity">AD</div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-12">
-            instagram thing
           </div>
         </div>
       </div>
@@ -224,16 +218,19 @@
             <a href="/contact">CONTACT</a>
             <a href="/privacy">PRIVACY POLICY</a>
             <a href="/terms">TERMS OF USE</a>
+            <a href="/advertise">ADVERTISE WITH US</a>
             <p>&copy; 2017 BEAUTYINFULL.COM - ALL RIGHTS RESERVED</p>
           </div>
           <div class="col-xs-12">
             <a href="">Back to Top</a>
           </div>
           <div class="col-xs-12">
-            Made with &#10084; by
-            <a href="https://github.com/jbonigomes" target="__blank">
-              jbonigomes
-            </a>
+            <small>
+              Made with &#10084; by
+              <a href="https://github.com/jbonigomes" target="__blank">
+                jbonigomes
+              </a>
+            </small>
           </div>
         </div>
       </div>

@@ -1,25 +1,55 @@
 {% if page.title != 'Home' %}
   <div class="publicity">AD</div>
-  <h1>{{ page.title }}</h1>
+  <h1 class="headline text-center">{{ page.title }}</h1>
+  <h3 class="text-center">{{ page.parent }}</h3>
 {% endif %}
 
 {% for post in site.posts %}
   {% if post.categories contains page.category %}
-  <h2 class="text-center">{{ post.title }}</h2>
-  <h3 class="text-center">{{ post.subtitle }}</h3>
+  <h2>{{ post.title }}</h2>
+  <h4>{{ post.subtitle }}</h4>
   <div class="post-image">
-    <div class="left">
-      {{ post.categories | join: ', ' }} |
-      {{ post.date | date: "%b %-d, %Y" }} |
-      {{ post.author }}
+    <div class="row">
+      <div class="col-xs-9">
+        <b>
+          {{ post.categories | join: ', ' }} |
+          {{ post.date | date: "%b %-d, %Y" }} |
+          {{ post.author }}
+        </b>
+      </div>
+      <div class="col-xs-3 text-right">
+        <div class="social">
+          <a href="#" class="facebook">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="#" class="twitter">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#" class="pinterest">
+            <i class="fa fa-pinterest-p"></i>
+          </a>
+          <a href="#" class="google">
+            <i class="fa fa-google-plus"></i>
+          </a>
+          <a
+            class="rss"
+            href="mailto:contact@beautyinfull.com?subject={{post.title}}&body={{post.url}}">
+            <i class="fa fa-envelope-o"></i>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="right">
-      <i class="fa fa-mail"></i>
+    <div>
+      <a href="{{ post.url }}">
+        <img src="{{ post.image }}" alt="{{ post.imagedescription }}">
+      </a>
+      <small class="text-center">{{ post.imagedescription }}</small>
+      <p>{{ post.description }}</p>
+      <div class="text-center">
+        <a href="{{ post.url }}" class="read-more">Read more</a>
+      </div>
     </div>
   </div>
-  <img src="{{post.image}}" alt="Image for {{post.title}}">
-  <p>{{ post.description }}</p>
-  <span>Read more</span>
   {% endif %}
 {% endfor %}
 

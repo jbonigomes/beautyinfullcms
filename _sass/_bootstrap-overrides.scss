@@ -1,3 +1,4 @@
+.btn,
 .btn.active.focus,
 .btn.active:focus,
 .btn.focus,
@@ -5,6 +6,19 @@
 .btn:active:focus,
 .btn:focus {
   outline: none;
+  border-radius: 0;
+}
+
+.btn-default {
+  border: none;
+  color: $white;
+  background: $light-purple;
+  transition: all .3s ease-in-out;
+}
+
+.btn-default:hover {
+  color: $white;
+  background: $purple;
 }
 
 .container {

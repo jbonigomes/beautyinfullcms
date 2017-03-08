@@ -1,11 +1,11 @@
 input,
 textarea {
   width: 100%;
-  border: none;
   padding: 10px;
   outline: none;
+  background: $white;
   margin-bottom: 20px;
-  background: $light-grey;
+  border: 1px solid $light-grey;
   transition: all .5s ease-in-out;
 }
 
@@ -15,7 +15,7 @@ input:active,
 textarea:hover,
 textarea:focus,
 textarea:active {
-  background: $white;
+  border-color: $light-purple;
 }
 
 textarea {

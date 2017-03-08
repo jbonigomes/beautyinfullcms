@@ -9,10 +9,17 @@ nav {
   div {
     flex: 1 1 auto;
 
-    a {
+    a,
+    a:focus,
+    a:active {
+      color: $black;
       display: block;
       padding: 10px 0;
       font-family: 'Poiret One', cursive;
+    }
+
+    a:hover {
+      color: $dark-grey;
     }
 
     i.fa {
