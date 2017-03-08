@@ -3,9 +3,7 @@ layout: post
 title: A post about makeup
 subtitle: The post subtitle here
 author: Jose
-rightside: true
-categories: makeup featured care
-carousel: true
+categories: care home carousel featured
 image: /img/posts/post_3.png
 permalink: /a-post-about-makeup/
 description: This text represents a paragraph, this paragraph can be as...

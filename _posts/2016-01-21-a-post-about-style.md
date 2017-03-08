@@ -3,9 +3,7 @@ layout: post
 title: A post about style
 subtitle: The post subtitle here
 author: Jose
-rightside: true
-categories: style featured care
-carousel: true
+categories: care home carousel featured
 image: /img/posts/post_4.png
 permalink: /a-post-about-style/
 description: This text represents a paragraph, this paragraph can be as...

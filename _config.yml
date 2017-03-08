@@ -1,49 +1,34 @@
 markdown: kramdown
 
-sass:
-  style: compressed
-
-gems:
-  - octopress-paginate
-
 ga_analytics: UA-75884732-1
 
 name: BeautyinFull
 
 url: http://beautyinfull.com
 
-paginate: 5
+sass:
+  style: compressed
 
 menus:
-  - 1:
-    name: Beauty & Make-up
+  - name: Beauty & Make-up
     children:
-      - 1:
-        name: Skin care
+      - name: Skin care
         url: care
-  - 2:
-    name: Fashion & Style
+  - name: Fashion & Style
     children:
-      - 1:
-        name: Skin cere
+      - name: Skin cere
         url: cere
-  - 3:
-    name: Fitness & Health
+  - name: Fitness & Health
     children:
-      - 1:
-        name: Skin cire
+      - name: Skin cire
         url: cire
-  - 4:
-    name: Inspirations
+  - name: Inspirations
     children:
-      - 1:
-        name: Skin core
+      - name: Skin core
         url: core
-  - 5:
-    name: Photography
+  - name: Photography
     children:
-      - 1:
-        name: Skin cure
+      - name: Skin cure
         url: cure
 
 exclude:

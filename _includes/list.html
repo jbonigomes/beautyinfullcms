@@ -1,4 +1,7 @@
-<h1>{{page.title}}</h1>
+{% if page.title != 'Home' %}
+  <div>Publicidade</div>
+  <h1>{{ page.title }}</h1>
+{% endif %}
 
 {% for post in site.posts %}
   {% if post.categories contains page.category %}
@@ -15,7 +18,9 @@
     </div>
   </div>
   <img src="{{post.image}}" alt="Image for {{post.title}}">
-  <p>{{post.description}}</p>
+  <p>{{ post.description }}</p>
   <span>Read more</span>
   {% endif %}
 {% endfor %}
+
+<div>publicidade</div>

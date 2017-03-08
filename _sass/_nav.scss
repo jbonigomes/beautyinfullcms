@@ -5,14 +5,27 @@
 nav {
   display: flex;
   text-align: left;
+  text-transform: uppercase;
 
   div {
-    flex: 1;
+    flex: 1 1 auto;
 
     a {
       display: block;
       padding: 10px 0;
       font-family: 'Poiret One', cursive;
     }
+
+    i.fa {
+      display: block;
+      cursor: pointer;
+      margin-top: 8px;
+      font-size: 22px;
+      color: $dark-purple;
+    }
   }
+}
+
+#search {
+  display: none;
 }

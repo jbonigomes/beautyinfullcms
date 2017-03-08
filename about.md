@@ -6,4 +6,4 @@ permalink: /about/
 description: Learn more about BeautyinFull
 ---
 
-<h1>About</h1>
+# About

@@ -3,9 +3,7 @@ layout: post
 title: A post about hair
 subtitle: The post subtitle here
 author: Jose
-rightside: true
-categories: hair care
-carousel: false
+categories: care home carousel featured
 image: /img/posts/post_2.png
 permalink: /a-post-about-hair/
 description: This text represents a paragraph, this paragraph can be as...
