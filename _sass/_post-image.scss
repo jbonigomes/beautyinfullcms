@@ -18,11 +18,11 @@
     font-family: 'Italianno', cursive;
   }
 
-  img {
+  a > img {
     transition: all .3s ease-in-out;
   }
 
-  img:hover {
+  a > img:hover {
     opacity: .8
   }
 

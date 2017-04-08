@@ -12,17 +12,46 @@ layout: default
 
   <h3 class="text-center">{{ page.subtitle }}</h3>
 
-  <p>
-    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {{ page.date | date: "%b %-d, %Y" }}
-    </time>
-
-    {% if page.author %}
-      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">{{ page.author }}</span>
-      </span>
-    {% endif %}
-  </p>
+  <div class="post-image">
+    <div class="row">
+      <div class="col-xs-9">
+        <b>
+          {{ page.categories | join: ', ' }} |
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ page.date | date: "%b %-d, %Y" }}
+          </time> |
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">{{ page.author }}</span>
+          </span>
+        </b>
+      </div>
+      <div class="col-xs-3 text-right">
+        <div class="social">
+          <a href="#" class="facebook">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="#" class="twitter">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#" class="pinterest">
+            <i class="fa fa-pinterest-p"></i>
+          </a>
+          <a href="#" class="google">
+            <i class="fa fa-google-plus"></i>
+          </a>
+          <a
+            class="rss"
+            href="mailto:contact@beautyinfull.com?subject={{page.title}}&body={{page.url}}">
+            <i class="fa fa-envelope-o"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img src="{{ page.image }}" alt="{{ page.imagedescription }}">
+      <small class="text-center">{{ page.imagedescription }}</small>
+    </div>
+  </div>
 
   <div itemprop="articleBody">
     {{ content }}

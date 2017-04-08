@@ -91,6 +91,45 @@
     return re.test(email);
   }
 
+
+  // CONTACT FORM
+  $('form.subscribe').on('submit', function(e) {
+    e.preventDefault();
+
+    var name = $('#sub-name').val();
+    var email = $('#sub-email').val();
+
+    if(subFormIsValid(email, name)) {
+      $.ajax({
+        url: '//formspree.io/contact@beautyinfull.com',
+        method: 'POST',
+        dataType: 'json',
+        data: {
+          from: name,
+          email: email,
+          message: 'Please subscribe me to the newsletter'
+        },
+      }).done(function() {
+        window.location.href = '/thanks/';
+      });
+    }
+    else {
+      $('form.subscribe button')
+        .addClass('animated shake')
+        .one(
+          'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+          function() {
+            $(this).removeClass('animated shake');
+          }
+        );
+    }
+  });
+
+  function subFormIsValid(email, name) {
+    return emailIsValid(email) > 0 && name.length > 0 && name.length < 200;
+  }
+
+
   // INSTAGRAM
   var instaurl = [
     'https://api.instagram.com/v1/users/930342892/media/recent/?',
