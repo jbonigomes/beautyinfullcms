@@ -1,51 +1,69 @@
 (function() {
   'use strict';
 
+  // SHOW SEARCH
+  var searchIsOpen = true;
+
+  $('#show-search').on('click', toggleSearch);
+  $('#search input').on('keyup', function(e) {
+    if (e.keyCode === 27) {
+      searchIsOpen = false;
+      toggleSearch();
+    }
+  });
+
+  function toggleSearch() {
+    searchIsOpen = !searchIsOpen;
+
+    if (searchIsOpen) {
+      $('#search').animate({ marginLeft: '1100px', width: '0' });
+      $('#search input').blur();
+    } else {
+      $('#search').animate({ marginLeft: '0', width: '1100px' });
+      $('#search input').focus();
+    }
+  }
+
+
   // SEARCH
-  var idx = lunr(function () {
-    this.field('id');
-    this.field('content');
-    this.field('title', { boost: 10 });
-  });
-
-  var data = $.getJSON('/search_data.json');
-
-  data.then(function(loaded_data) {
-    $.each(loaded_data, function(index, value) {
-      idx.add($.extend({ id: index }, value));
-    });
-  });
-
   $('#search').on('submit', function(e) {
     e.preventDefault();
     var query = $('#search input').val();
-    if(query.length) {
-      var results = idx.search(query);
-      display_search_results(results);
-    }
-    else {
-      window.location.href = '/';
-    }
+    window.location.href = '/search/?query=' + query;
   });
 
-  function display_search_results(results) {
-    var $search_results = $('.content');
+  if (window.location.pathname === '/search/') {
+    var idx = lunr(function () {
+      this.field('id');
+      this.field('content');
+      this.field('title', { boost: 10 });
+    });
 
-    $search_results.html('<h1>Search Resuls</h1>');
+    var data = $.getJSON('/search_data.json');
 
     data.then(function(loaded_data) {
+      $.each(loaded_data, function(index, value) {
+        idx.add($.extend({ id: index }, value));
+      });
+
+      var results = idx.search(window.location.search.replace('?query=', ''));
+      var $search_results = $('#search-results');
+
       if(results.length) {
+        $search-results.html('<ul></ul>');
+
         results.forEach(function(result) {
           var item = loaded_data[result.ref];
           var appendString = '' +
             '<li><a href="' + item.url + '">' + item.title + '</a></li>';
-          $search_results.append(appendString);
+          $search_results.firstChild().append(appendString);
         });
       } else {
-        $search_results.append('<li>No results found</li>');
+        $search_results.html('No results found');
       }
     });
   }
+
 
   // CONTACT FORM
   $('form.contact').on('submit', function(e) {

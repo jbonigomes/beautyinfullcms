@@ -1,0 +1,15 @@
+.search-container {
+  position: relative;
+}
+
+#search {
+  width: 0;
+  left: -1050px;
+  overflow: hidden;
+  position: absolute;
+  margin-left: 1100px;
+
+  input {
+    border: none;
+  }
+}
