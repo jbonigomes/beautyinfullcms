@@ -1,5 +1,5 @@
 {% if page.title != 'Home' %}
-  <div class="publicity">AD</div>
+  {% include adsense.html %}
   <h1 class="headline text-center">{{ page.title }}</h1>
   <h3 class="text-center">{{ page.parent }}</h3>
 {% endif %}
@@ -53,4 +53,4 @@
   {% endif %}
 {% endfor %}
 
-<div class="publicity">AD</div>
+{% include adsense.html %}

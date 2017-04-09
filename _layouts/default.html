@@ -180,7 +180,7 @@
             {{ content }}
           </div>
           <div class="col-xs-3">
-            <div class="publicity">AD</div>
+            {% include adsense.html %}
 
             <div>
               <form class="subscribe" novalidate>
@@ -193,7 +193,7 @@
               </form>
             </div>
 
-            <div class="publicity">AD</div>
+            {% include adsense.html %}
 
             {% for post in site.posts %}
               {% if post.categories contains 'featured' %}
@@ -204,7 +204,7 @@
               {% endif %}
             {% endfor %}
 
-            <div class="publicity">AD</div>
+            {% include adsense.html %}
           </div>
         </div>
       </div>
