@@ -25,13 +25,14 @@
   }
 
 
-  // SEARCH
+  // SUBMIT SEARCH
   $('#search').on('submit', function(e) {
     e.preventDefault();
-    var query = $('#search input').val();
-    window.location.href = '/search/?query=' + query;
+    window.location.href = '/search/?query=' + $('#search input').val();
   });
 
+
+  // CATCH SEARCH TERM
   if (window.location.pathname === '/search/') {
     var idx = lunr(function () {
       this.field('id');
@@ -39,9 +40,7 @@
       this.field('title', { boost: 10 });
     });
 
-    var data = $.getJSON('/search_data.json');
-
-    data.then(function(loaded_data) {
+    $.getJSON('/search_data.json').then(function(loaded_data) {
       $.each(loaded_data, function(index, value) {
         idx.add($.extend({ id: index }, value));
       });
@@ -49,14 +48,35 @@
       var results = idx.search(window.location.search.replace('?query=', ''));
       var $search_results = $('#search-results');
 
-      if(results.length) {
-        $search-results.html('<ul></ul>');
+      $search_results.html('');
 
+      if(results.length) {
         results.forEach(function(result) {
           var item = loaded_data[result.ref];
-          var appendString = '' +
-            '<li><a href="' + item.url + '">' + item.title + '</a></li>';
-          $search_results.firstChild().append(appendString);
+
+          var appendString = [
+            '<div class="row">',
+              '<div class="col-xs-3">',
+                '<a href="' + item.url + '">',
+                  '<img src="' + item.image + '">',
+                '</a>',
+              '</div>',
+              '<div class"col-xs-9">',
+                '<h2>' + item.title + '</h2>',
+                '<h4>' + item.subtitle + '</h4>',
+                '<p>' + item.description + '</p>',
+                '<div>',
+                  '<i>by ' + item.author + '</i>',
+                  '<b> on: ' + item.date + '</b>',
+                '</div>',
+                '<div><small>' + item.categories + '</small></div>',
+              '</div>',
+            '</div>'
+          ].join('');
+
+          console.log($search_results);
+
+          $search_results.append(appendString);
         });
       } else {
         $search_results.html('No results found');
@@ -110,7 +130,7 @@
   }
 
 
-  // CONTACT FORM
+  // NEWSLETTER FORM
   $('form.subscribe').on('submit', function(e) {
     e.preventDefault();
 
