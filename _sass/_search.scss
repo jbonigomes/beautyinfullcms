@@ -13,3 +13,27 @@
     border: none;
   }
 }
+
+#search-results {
+  h2 {
+    margin-top: 0;
+  }
+
+  h4 {
+    font-size: 18px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  a {
+    color: $black;
+    display: block;
+    margin-bottom: 70px;
+    transition: all .3s ease-in-out;
+  }
+
+  a:hover {
+    opacity: .8;
+    color: $black;
+  }
+}

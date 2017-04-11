@@ -55,26 +55,26 @@
           var item = loaded_data[result.ref];
 
           var appendString = [
-            '<div class="row">',
-              '<div class="col-xs-3">',
-                '<a href="' + item.url + '">',
-                  '<img src="' + item.image + '">',
-                '</a>',
-              '</div>',
-              '<div class"col-xs-9">',
-                '<h2>' + item.title + '</h2>',
-                '<h4>' + item.subtitle + '</h4>',
-                '<p>' + item.description + '</p>',
-                '<div>',
-                  '<i>by ' + item.author + '</i>',
-                  '<b> on: ' + item.date + '</b>',
+            '<a href="' + item.url + '">',
+              '<div class="row">',
+                '<div class="col-xs-3">',
+                    '<img src="' + item.image + '">',
                 '</div>',
-                '<div><small>' + item.categories + '</small></div>',
+                '<div class"col-xs-9">',
+                  '<h2>' + item.title + '</h2>',
+                  '<h4>' + item.subtitle + '</h4>',
+                  '<p>',
+                    '<small>',
+                      item.author + ' @ ' + item.date + ' | ' + item.categories,
+                    '</small>',
+                  '</p>',
+                '</div>',
+                '<div class="col-xs-12">',
+                  '<p>' + item.description + '</p>',
+                '</div>',
               '</div>',
-            '</div>'
+            '</a>'
           ].join('');
-
-          console.log($search_results);
 
           $search_results.append(appendString);
         });
@@ -148,7 +148,15 @@
           message: 'Please subscribe me to the newsletter'
         },
       }).done(function() {
-        window.location.href = '/thanks/';
+        var newsletterHtml = [
+          '<div class="text-center">',
+            '<h1>Thanks</h1>',
+            '<p>Your request has been submitted succesfully</p>',
+            '<i class="fa fa-thumbs-up"></i>',
+          '</div>'
+        ].join('');
+
+        $('#newsletter').html(newsletterHtml);
       });
     }
     else {
