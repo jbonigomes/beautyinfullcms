@@ -11,7 +11,7 @@ layout: null
       "url": "{{ post.url | xml_escape }}",
       "description": "{{ post.description | xml_escape }}",
       "categories": "{{ post.categories | join: ', ' }}",
-      "date": "{{ post.date | date: \"%b %-d, %Y\" }}",
+      "date": "{{ post.date | date: '%b %-d, %Y' }}",
       "author": "{{ post.author | xml_escape }}",
       "image": "{{ post.image | xml_escape }}"
     }
