@@ -30,3 +30,21 @@ footer {
     margin-top: 10px;
   }
 }
+
+@media (max-width: 1200px) {
+  body {
+    margin-bottom: 500px;
+  }
+
+  footer {
+    height: 500px;
+
+    a {
+      display: block;
+    }
+
+    small a {
+      display: inline-block;
+    }
+  }
+}
