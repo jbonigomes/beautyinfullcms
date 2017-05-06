@@ -43,3 +43,15 @@
     color: $pinterest;
   }
 }
+
+@media (max-width: 1200px) {
+  .social {
+    margin-top: 0;
+
+    a,
+    a:focus,
+    a:active {
+      text-align: center;
+    }
+  }
+}
