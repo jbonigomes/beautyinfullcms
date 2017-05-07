@@ -61,10 +61,71 @@ nav {
   .nav {
     top: 0;
     left: 0;
+    right: 0;
     bottom: 0;
-    right: 200px;
+    z-index: 20;
     position: fixed;
     overflow: hidden;
-    background: $dark-grey;
+    background: rgba(0, 0, 0, .8);
+
+    nav {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 250px;
+      display: block;
+      position: fixed;
+      background: $black;
+
+      div {
+        flex: none;
+        text-align: center;
+      }
+
+      a {
+        padding: 20px 10px;
+        color: $light-purple;
+      }
+
+      a:hover {
+        color: $white;
+        background: $purple;
+      }
+
+      .nested {
+        position: relative;
+
+        a {
+          color: $white;
+          background: $dark-purple;
+        }
+      }
+
+      .close-menu {
+        height: 40px;
+        position: relative;
+
+        &:after,
+        &:before {
+          top: 10px;
+          width: 1px;
+          right: 30px;
+          content: '';
+          height: 36px;
+          display: block;
+          position: absolute;
+          background-color: $light-purple;
+        }
+
+        &:after {
+          transform: rotate(45deg);
+        }
+
+        &:before {
+          transform: rotate(-45deg);
+        }
+      }
+    }
   }
 }
