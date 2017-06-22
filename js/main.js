@@ -26,10 +26,15 @@
 
 
   // SUBMIT SEARCH
-  $('#search').on('submit', function(e) {
-    e.preventDefault();
-    window.location.href = '/search/?query=' + $('#search input').val();
-  });
+  function onSearchSubmit(elementId) {
+    return function (e) {
+      e.preventDefault();
+      window.location.href = '/search/?query=' + $(elementId + ' input').val();
+    }
+  }
+
+  $('#search').on('submit', onSearchSubmit('#search'));
+  $('#search-responsive').on('submit', onSearchSubmit('#search-responsive'));
 
 
   // CATCH SEARCH TERM
@@ -186,5 +191,36 @@
     res.data.forEach(function(instaimg) {
       // add the image to the DOM
     });
+  });
+
+
+  // RESPONSIVE MENU
+  $('.parent > a').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    var isRemove = $(e.target).closest('.parent').hasClass('opened');
+
+    $('.parent').removeClass('opened');
+
+    if (isRemove) {
+      $(e.target).closest('.parent').removeClass('opened');
+    } else {
+      $(e.target).closest('.parent').addClass('opened');
+    }
+  });
+
+  $('.responsive-menu').on('click', function (e) {
+    if (!$(e.target).closest('.menu-wrap').hasClass('menu-wrap')) {
+      $('body').removeClass('menu-opened');
+    }
+  });
+
+  $('.open-menu').on('click', function (e) {
+    $('body').addClass('menu-opened');
+  });
+
+  $('.close-menu').on('click', function (e) {
+    $('body').removeClass('menu-opened');
   });
 })();

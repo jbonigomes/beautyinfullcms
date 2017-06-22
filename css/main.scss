@@ -3,7 +3,10 @@
 ---
 @charset "utf-8";
 
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+@import "fonts";
+@import "animate";
+@import "bootstrap";
+@import "font-awesome";
 
 @import "variables";
 @import "browser-upgrade";
@@ -16,6 +19,7 @@
 
 @import "nav";
 @import "footer";
+@import "responsive-menu";
 
 @import "logo";
 @import "social";
@@ -24,6 +28,7 @@
 @import "carousel";
 @import "subscribe";
 @import "post-image";
+@import "search-responsive";
 
 @import "thanks";
 @import "not-found";
